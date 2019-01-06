@@ -1,0 +1,55 @@
+{% extends 'home/base_generic.html' %}
+{% load static %}
+{% block add %}
+  <link rel="stylesheet" href="{% static 'home/css/about.css'%}">
+{% endblock %}
+{% block title %} <title> About </title> {% endblock %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+    <h1>Technology</h1>
+    <p>
+      Looking to edit the site and truly make it your own? Here are some
+      resources to get you started.
+    </p>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card" id="django-card" style="width: 300px; height: 350px;">
+        <img class="card-img-top" src="{% static 'home/images/django.png' %}" height=150px width=150px>
+        <div class="card-body">
+          <h5 class="card-title">Django</h5>
+          <p class="card-text">
+            This site was built with Django: a flexible, easy to use web framework. Check out the docs!
+          </p>
+          <a href="https://docs.djangoproject.com/" target="_blank" class="btn btn-primary">Docs</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card" id="bootstrap-card" style="width: 300px; height: 350px;">
+        <img class="card-img-top" src="{% static 'home/images/bootstrap.png' %}" height=150px width=150px>
+        <div class="card-body">
+          <h5 class="card-title">Bootstrap</h5>
+          <p class="card-text">
+            Not satisfied with my design? Bootstrap makes it easy to edit and make the layout your own!
+          </p>
+          <a href="https://getbootstrap.com/docs/" target="_blank" class="btn btn-primary">Docs</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card" id="w3schools-card" style="width: 300px; height: 350px;">
+        <img class="card-img-top" src="{% static 'home/images/w3school.jpg' %}" height=150px width=150px>
+        <div class="card-body">
+          <h5 class="card-title">W3Schools</h5>
+          <p class="card-text">
+            Don't know HTML or CSS? Want to add some Javascript? Look no further than W3Schools!
+          </p>
+          <a href="https://www.w3schools.com/" target="_blank" class="btn btn-primary">Docs</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

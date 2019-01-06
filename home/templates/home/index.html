@@ -1,0 +1,22 @@
+{% extends 'home/base_generic.html' %}
+{% block add %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'home/css/main.css' %}">
+{% endblock %}
+{% block title %} <title> Home </title> {% endblock %}
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+    <h1>Hello, World!</h1>
+    <p>Welcome to my shopping site, written in Django!</p>
+  </div>
+  <div class="h-100 row align-items-center">
+    <div class="col" id="info">
+      <p>
+        A fully working, easily editable Django website for e-commerce. Just hop
+        on the <a href="/admin">Admin</a> panel and start creating products!
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

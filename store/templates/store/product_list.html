@@ -1,0 +1,40 @@
+{% extends 'home/base_generic.html' %}
+{% load static %}
+{% load cool_paginate %}
+{% block add %}
+  <link rel="stylesheet" href="{% static 'store/css/products.css'%}">
+{% endblock %}
+{% block title %} <title> Store </title> {% endblock %}
+{% block content %}
+<div class="row">
+{% for product in product_list %}
+{% if product.available %}
+<div class="col-sm-4">
+  <div class="card" id="django-card" style="width: 300px; height: 350px;">
+    <img class="card-img-top" src="{{ product.image.url }}" height=150px width=150px>
+    <div class="card-body">
+      <h5 class="card-title">{{ product.name }}</h5>
+      <p class="card-text">
+        {{ product.description }} And only {{ product.price }}!
+      </p>
+      <form action="{% url 'charge' %}" method="post">
+        {% csrf_token %}
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="{{ key }}"
+          data-description="A Django Charge"
+          data-shipping-address = True
+          data-amount= "{{ product.price_in_cents }}"
+          data-locale="auto">
+        </script>
+        <input type="hidden" name="id" value="{{ product.id }}">
+      </form>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endfor %}
+<div class="container-fluid">
+  <div style="margin-top: 50px;"> {% cool_paginate page_obj=product %}</div>
+</div>
+</div>
+{% endblock %}
