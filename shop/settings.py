@@ -20,7 +20,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'p5ua@d#t!-0gdt2km8sv1s^*o1$j89$5w2c_fl$cp*!c_c1)n-'
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -129,5 +128,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 
 # Stripe stuff
-STRIPE_SECRET_KEY = 'sk_test_7TbjW0VidhW8xl1XZ7CKOVQD'
-STRIPE_PUBLISHABLE_KEY = 'pk_test_IvSPfFEnh66G8PvVFTZyLWaT'
+STRIPE_SECRET_KEY = ''
+STRIPE_PUBLISHABLE_KEY = ''
