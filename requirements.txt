@@ -3,7 +3,7 @@ cement==2.6.2
 certifi==2018.4.16
 chardet==3.0.4
 cryptography==2.1.4
-Django==1.11.11
+Django==2.2.24
 -e git+https://github.com/droope/droopescan.git@bebcc39d9ed31513f1dbe49b7e20604b4ebe25ad#egg=droopescan
 duplicity==0.7.17
 enum34==1.1.6
